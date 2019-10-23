@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 	# For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 	Rails.application.routes.draw do
+		root 'site#index'
+
 		namespace :api do
 			resources :events, only: %i[index show create destroy update]
 		end
 	end
 end
+
